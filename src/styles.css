@@ -1,23 +1,76 @@
-.row{
-    display: grid;
-    grid-template-columns: 3fr 9fr;
+.row {
+  display: -ms-grid;
+  display: grid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-grid-columns: 3fr 9fr;
+      grid-template-columns: 3fr 9fr;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
-body{
-    background-color:yellow;
+body {
+  background-color: #353c51;
+  color: #f0fff0;
 }
 
-li{
-list-style: none;    
-
+li {
+  list-style: none;
 }
 
-.all-projects :last-child{
-    margin-top:1.5em;
-
+.all-projects :last-child {
+  margin-top: 1.5em;
 }
 
-.all-projects input{
-    border: none;
-    
+input {
+  border: none;
+  color: #f0fff0;
+  border-bottom: 2px solid grey;
+  background-color: #353c51;
+  padding: .5em;
 }
+
+.todo-list-title {
+  background-color: grey;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: black;
+  padding: .5em;
+}
+
+.todo-title {
+  margin-left: 1.2em;
+}
+
+.todos {
+  max-width: 700px;
+  -ms-flex-line-pack: end;
+      align-content: flex-end;
+  background-color: honeydew;
+  color: black;
+  padding-bottom: 1em;
+}
+
+.todo-list :last-child {
+  margin-top: 1em;
+  background-color: honeydew;
+  color: black;
+  margin-right: 1em;
+}
+
+.todo-list ul li:not(:last-child) {
+  border-bottom: 1px solid #626f78;
+  padding-bottom: .5em;
+  padding-top: .5em;
+  padding-left: 0;
+}
+/*# sourceMappingURL=styles.css.map */
