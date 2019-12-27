@@ -1,0 +1,23 @@
+.row{
+    display: grid;
+    grid-template-columns: 3fr 9fr;
+}
+
+body{
+    background-color:yellow;
+}
+
+li{
+list-style: none;    
+
+}
+
+.all-projects :last-child{
+    margin-top:1.5em;
+
+}
+
+.all-projects input{
+    border: none;
+    
+}
