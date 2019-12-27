@@ -9,51 +9,56 @@
   <link rel="stylesheet" href="/src/styles.css" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <title>Document</title>
+  <script defer src="script.js"></script>
 </head>
 
 <body>
-  <section class="row">
-    <section class="col s12 m4 l3 grid">
-      <!-- Note that "m4 l3" was added -->
-      <div class="container">
-        <div class="projects-list">
-          <div class="projects-title">
-            <h3>All Projects</h3>
-          </div>
-          <ul class="all-projects">
-            <li><i class="tiny material-icons">crop_square</i>Youtube</li>
-            <li><i class="tiny material-icons">crop_square</i> Work</li>
-            <li><i class="tiny material-icons">crop_square</i> Grocery</li>
-            <li>
-              <input type="text" placeholder="+ Click here to create a new list" />
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
+  <h1 class="title">To Do</h1>
 
-    <section class="col s12 m8 l9">
-      <!-- Note that "m8 l9" was added -->
-      <div class="container">
-        <div class="todos">
-          <div class="todo-list-title">
-            <h3 class="heading todo-title">Youtube</h3>
-            <h5 class="created-time">created 2hrs ago</h5>
-          </div>
-          <div class="todo-list">
-            <ul class="collection">
-              <li class="collection-item">Record video</li>
-              <li class="collection-item">Record video</li>
-              <li class="collection-item">Record video</li>
-              <li class="collection-item"><input type="text" placeholder="enter new task" /></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-  </section>
+  <div class="all-tasks">
+    <h2 class="task-list-title">My lists</h2>
+    <ul class="task-list" data-lists></ul>
 
-  <script src="main.js"></script>
+    <form action="" data-new-list-form>
+      <input type="text" class="new list" data-new-list-input placeholder="new list name" aria-label="new list name" />
+      <button class="btn create" aria-label="create new list">+</button>
+    </form>
+  </div>
+
+  <div class="todo-list" data-list-display-container>
+    <div class="todo-header">
+      <h2 class="list-title" data-list-title>YouTube</h2>
+      <p class="task-count" data-list-count>3 tasks remaining</p>
+    </div>
+
+    <div class="todo-body">
+      <div class="tasks" data-tasks></div>
+
+      <div class="new-task-creator">
+        <form action="" data-new-task-form>
+          <input type="text" data-new-task-input class="new task" placeholder="new task name"
+            aria-label="new task name" />
+          <button class="btn create" aria-label="create new task">+</button>
+        </form>
+      </div>
+
+      <div class="delete-stuff">
+        <button class="btn delete" data-clear-complete-tasks-button>Clear completed tasks</button>
+        <button class="btn delete" data-delete-list-button>Delete list</button>
+      </div>
+    </div>
+  </div>
+
+
+  </div>
+  <template id="task-template">
+    <div class="task">
+      <input type="checkbox" />
+      <label>
+        <span class="custom-checkbox"></span>
+      </label>
+    </div>
+  </template>
 </body>
 
 </html>
