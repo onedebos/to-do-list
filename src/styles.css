@@ -63,11 +63,11 @@ input {
           align-items: center;
 }
 
-.secondary-content {
+.edit-delete {
   color: rgba(224, 224, 224, 0.8);
 }
 
-.secondary-content :hover {
+.edit-delete :hover {
   color: red;
   -webkit-transition: 0.2s ease-in;
   transition: 0.2s ease-in;

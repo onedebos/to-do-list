@@ -15,17 +15,12 @@
   <body>
       <section class="row">
     <section class="col s12 m4 l3 grid">
-      <!-- Note that "m4 l3" was added -->
       <div class="container">
-        <div class="projects-list">
+        <div class="category-list">
             <div class="projects-title">
                 <h3>All Projects</h3>
             </div>
-          <ul class="all-projects">
-            <li><i class="tiny material-icons">crop_square</i>
-                Youtube</li>
-            <li><i class="tiny material-icons">crop_square</i> Work</li>
-            <li><i class="tiny material-icons">crop_square</i> Grocery</li>
+          <ul class="todo-categories" data-categories>
             <li>
               <input id="category"
                 type="text"
@@ -47,11 +42,11 @@
             </div>
             <div class="todo-list">
               <ul class="collection">
-                    <li class="collection-item"><div>Alvin<a href="#!" class="secondary-content"><i class="material-icons">edit</i><i class="material-icons">delete_sweep</i></a></div></li>
-                <li class="collection-item">Record video</li>
-                <li class="collection-item">Record video</li>
-                <li class="collection-item collection-input"><input id="todo" class="todo-input" type="text" placeholder="enter new task">
-                    <i class="material-icons secondary-content">add</i>
+                    <li class="collection-item"><div>Alvin<a href="#!" class="secondary-content edit-delete"><i class="material-icons">edit</i><i class="material-icons">delete_sweep</i></a></div></li>
+                    <li class="collection-item"><div>Alvin<a href="#!" class="secondary-content edit-delete"><i class="material-icons">edit</i><i class="material-icons">delete_sweep</i></a></div></li>
+                    <li class="collection-item"><div>Alvin<a href="#!" class="secondary-content edit-delete"><i class="material-icons">edit</i><i class="material-icons">delete_sweep</i></a></div></li>
+                <li class="collection-item collection-input"><i class="tiny material-icons secondary-content">add</i><input id="todo" class="todo-input" type="text" placeholder="enter new task">
+                    
                 </li>
               </ul>
             </div>
