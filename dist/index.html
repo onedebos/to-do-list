@@ -27,7 +27,7 @@
             <li><i class="tiny material-icons">crop_square</i> Work</li>
             <li><i class="tiny material-icons">crop_square</i> Grocery</li>
             <li>
-              <input
+              <input id="category"
                 type="text"
                 placeholder="+ Click here to create a new list"
               />
@@ -47,10 +47,12 @@
             </div>
             <div class="todo-list">
               <ul class="collection">
+                    <li class="collection-item"><div>Alvin<a href="#!" class="secondary-content"><i class="material-icons">edit</i><i class="material-icons">delete_sweep</i></a></div></li>
                 <li class="collection-item">Record video</li>
                 <li class="collection-item">Record video</li>
-                <li class="collection-item">Record video</li>
-                <li class="collection-item"><input type="text" placeholder="enter new task" /></li>
+                <li class="collection-item collection-input"><input id="todo" class="todo-input" type="text" placeholder="enter new task">
+                    <i class="material-icons secondary-content">add</i>
+                </li>
               </ul>
             </div>
           </div>

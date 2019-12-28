@@ -44,24 +44,32 @@ input {
 }
 
 .todos {
-  -ms-flex-line-pack: end;
-      align-content: flex-end;
-  background-color: honeydew;
   color: black;
-  padding-bottom: 1em;
 }
 
-.todo-list :last-child {
-  margin-top: 1em;
-  background-color: honeydew;
+.todo-input {
   color: black;
-  margin-right: 1em;
 }
 
-.todo-list ul li:not(:last-child) {
-  border-bottom: 1px solid #626f78;
-  padding-bottom: .5em;
-  padding-top: .5em;
-  padding-left: 2em;
+.collection-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.secondary-content {
+  color: rgba(224, 224, 224, 0.8);
+}
+
+.secondary-content :hover {
+  color: red;
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
 }
 /*# sourceMappingURL=styles.css.map */

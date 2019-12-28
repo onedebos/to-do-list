@@ -50,30 +50,29 @@ input{
     padding-bottom: 1em;
 }
 .todos{
-
-    align-content: flex-end;
-    background-color: honeydew;
     color:$todos-text;
-    padding-bottom: 1em;
+}
+
+.todo-input{
+    // margin-left: .5em;
+    color:$todos-text;
+    // padding:.5em;
+    
 
 }
 
-.todo-list :last-child{
-    margin-top:1em;
-    background-color: honeydew;
-    color:$todos-text;
-    margin-right: 1em;
+.collection-input{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
 }
 
-// .todo-list ul li :last-child{
-//     padding-left:1em;
+.secondary-content{
+    color:rgba(224,224,224,0.8)
+}
 
-// }
-
-.todo-list ul li:not(:last-child){
-    border-bottom:1px solid $todos-text-border-bottom;
-    padding-bottom:.5em;
-    padding-top:.5em;
-    padding-left: 2em;
-
+.secondary-content :hover{
+    color:red;
+    transition: 0.2s ease-in;
 }
