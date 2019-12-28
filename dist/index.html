@@ -9,28 +9,33 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
     <link rel="stylesheet" href="/src/styles.css" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    
     <title>Document</title>
   </head>
   <body>
-      <section class="row">
-    <section class="col s12 m4 l3 grid">
-      <div class="container">
-        <div class="category-list">
+    <section class="row">
+      <section class="col s12 m4 l3">
+        <div class="container">
+          <div class="category-list">
             <div class="projects-title">
-                <h3>All Projects</h3>
+              <h3>All Projects</h3>
             </div>
-          <ul class="todo-categories" data-categories>
-            <li>
-              <input id="category"
-                type="text"
-                placeholder="+ Click here to create a new list"
-              />
-            </li>
-          </ul>
+            <ul class="todo-categories" data-categories></ul>
+            <form data-new-cat-form action="" class="new-cat-form">
+                    <input
+                    id="category"
+                    type="text" data-new-cat-input
+                    placeholder=" Click here to create a new list"
+                  />
+            </form>
+            
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
       <section class="col s12 m8 l9">
         <!-- Note that "m8 l9" was added -->
@@ -41,20 +46,50 @@
               <h5 class="created-time">created 2hrs ago</h5>
             </div>
             <div class="todo-list">
+
               <ul class="collection">
-                    <li class="collection-item"><div>Alvin<a href="#!" class="secondary-content edit-delete"><i class="material-icons">edit</i><i class="material-icons">delete_sweep</i></a></div></li>
-                    <li class="collection-item"><div>Alvin<a href="#!" class="secondary-content edit-delete"><i class="material-icons">edit</i><i class="material-icons">delete_sweep</i></a></div></li>
-                    <li class="collection-item"><div>Alvin<a href="#!" class="secondary-content edit-delete"><i class="material-icons">edit</i><i class="material-icons">delete_sweep</i></a></div></li>
-                <li class="collection-item collection-input"><i class="tiny material-icons secondary-content">add</i><input id="todo" class="todo-input" type="text" placeholder="enter new task">
-                    
+
+
+                <li class="collection-item">
+                  <div>
+                    Alvin<a href="#!" class="secondary-content edit-delete"
+                      ><i class="material-icons">edit</i
+                      ><i class="material-icons">delete_sweep</i></a
+                    >
+                  </div>
+                </li>
+                <li class="collection-item">
+                  <div>
+                    Alvin<a href="#!" class="secondary-content edit-delete"
+                      ><i class="material-icons">edit</i
+                      ><i class="material-icons">delete_sweep</i></a
+                    >
+                  </div>
+                </li>
+                <li class="collection-item">
+                  <div>
+                    Alvin<a href="#!" class="secondary-content edit-delete"
+                      ><i class="material-icons">edit</i
+                      ><i class="material-icons">delete_sweep</i></a
+                    >
+                  </div>
+                </li>
+                <li class="collection-item collection-input">
+                  <i class="tiny material-icons secondary-content">add</i
+                  ><input
+                    id="todo"
+                    class="todo-input"
+                    type="text" 
+                    placeholder="enter new task"
+                  />
                 </li>
               </ul>
             </div>
           </div>
         </div>
-    </section>
       </section>
-
+    </section>
     <script src="main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   </body>
 </html>
