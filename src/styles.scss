@@ -76,3 +76,13 @@ input{
     color:red;
     transition: 0.2s ease-in;
 }
+
+.active{
+    font-size:1.5em;
+    font-weight: 600;
+}
+
+.todo-categories li{
+    cursor: pointer;
+}
+
