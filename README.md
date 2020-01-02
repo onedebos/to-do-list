@@ -39,6 +39,9 @@ npm install
 - Linkedin: [linkedin](https://www.linkedin.com/in/adebola-niran/)
 
 👤 **Diego**
+- Github: [@digomes87](https://github.com/digomes87)
+- Twitter: [@DevDiegoGo](https://twitter.com/DevDiegoGo)
+- Linkedin: [linkedin](https://www.linkedin.com/in/diego-gomes-6b208384/)
 
 ## Show your support
 
