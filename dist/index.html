@@ -65,7 +65,7 @@
           <div class="col s12">
             <div class="row">
               <div class="input-field col s6" >
-                <input placeholder="enter a title"
+                <input placeholder="enter a title" onfocus = "this.value = ''"
                   id="todo-title"
                   type="text"
                   class="validate"
@@ -74,7 +74,7 @@
                 <label for="title">Title</label>
               </div>
               <div class="input-field col s6" >
-                <input id="description" type="text" class="validate" data-list-description />
+                <input id="description" type="text" class="validate" onfocus = "this.value = ''" data-list-description />
                 <label for="description" >Description</label>
               </div>
               <div class="input-field col s6" >

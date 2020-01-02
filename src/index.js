@@ -28,22 +28,29 @@ const delCatBtn = document.querySelector("[data-delete-cat-btn]");
 // const runToDos = toDo();
 
 categoryContainer.addEventListener('click', e => {
-  if (e.target.tagName.toLowerCase() == 'li'){
-      selectedCatId = e.target.dataset.catId;
-      saveToLocalStorage();
-      render();
-
-  }
+  storeCatId(e.target);
+  saveToLocalStorage();
+  render();
 })
 
+const storeCatId = (el) =>{
+  if(el.classList.contains('category-item')){
+    selectedCatId = el.getAttribute('data-cat-id');
+    
+    
+  }
+}
 
 
 delCatBtn.addEventListener('click', () => {
-    categories = categories.filter( category => category.id !==selectedCatId);
+    categories = categories.filter( category => category.id != selectedCatId);
+
     
     selectedCatId = null;
+    
+    // render();
+    renderWhenNoCats();
     saveToLocalStorage();
-    render();
 })
 
 export const saveToLocalStorage = () =>{
@@ -58,7 +65,7 @@ export const saveToLocalStorage = () =>{
 const render = () => {
     clearElement(categoryContainer);
     renderCat();    
-    let selectedCat = categories.find(category => category.id === selectedCatId);
+    let selectedCat;
 
     
     if (selectedCatId == 1){
@@ -67,13 +74,24 @@ const render = () => {
       catTitle.innerText = selectedCat.name;
       renderToDo(selectedCat);
     }else{
+
         listDisplayContainer.style.display = '';
+        selectedCat = categories.find(category => category.id == selectedCatId);
         catTitle.innerText = selectedCat.name;
-        // runToDos.renderToDo();
+
+        // // runToDos.renderToDo();
         renderToDo(selectedCat);
         saveToLocalStorage();
             
     }
+  }
+
+  const renderWhenNoCats = () =>{
+    renderCat();
+    listDisplayContainer.style.display = 'none';
+      // const selectedCat = categories.find(category => category.id === 1);
+      // catTitle.innerText = selectedCat.name;
+      // renderToDo(selectedCat);
   }
   
   // on Enter add category to array and DOM
@@ -85,14 +103,14 @@ const render = () => {
 
       if (categoryName == null || categoryName == "") {
         M.toast({ html: "Please enter a category name!" }, 1000);
-      } else {
+      }else {
         const category = catObject.createCategory(categoryName);
         catInput.value = null;
         categories.push(category);
         saveToLocalStorage();
         render();
 
-        console.log(categories);
+        // console.log(categories);
       }
     });
   };
@@ -150,36 +168,49 @@ document.addEventListener('DOMContentLoaded', function() {
       const grabToDoSubmit = document.querySelector(".grab-todo");
       grabToDoSubmit.addEventListener("click", e => {
         e.preventDefault();
-        let listTitle = document.getElementById("todo-title").value;
+        let listTitle = document.getElementById("todo-title")
+        let theTitle = listTitle.value;
   
         let listDecription = document.getElementById("description").value;
   
         let listDate = document.querySelector("[data-list-date]").value;
         let listPriority = document.querySelector("[data-selected-todo-option]");
         let selectedPriority = listPriority[listPriority.selectedIndex].text;
-  
+        const todaysDate = new Date();
         if (
-          listTitle == "" ||
+          theTitle == "" ||
           listDecription == "" ||
-          listDate == "dd / mm / yyyy" ||
-          listPriority == "Choose your option"
+          listPriority == "Choose your option "
         ) {
           M.toast({ html: "Please complete todo Form!" }, 1000);
+        } else if(listDate < todaysDate){
+          M.toast({ html: "Please enter a valid date!" }, 1000);
         } else {
           const newToDo = todoItems(
-            listTitle,
+            theTitle,
             listDecription,
             listDate,
             selectedPriority
           );
+
+          let selectedCat;
+          if (categories.length == 1){
+             selectedCat = categories.find(
+              category => category.id == 1
+            );
+          }else {
+            selectedCat = categories.find(
+              category => category.id == selectedCatId
+            );
+          }
   
-           const selectedCat = categories.find(
-            category => category.id === selectedCatId
-          );
+           
           selectedCat.todos.push(newToDo);
           // runToDo.renderToDo();
+          
           renderToDo(selectedCat);
           saveToLocalStorage();
+
           // console.log(selectThis.categories);
         }
       });
