@@ -34,7 +34,4 @@ const category = () => {
 };
 
 
-// runIndex;
-
-
 export default category;

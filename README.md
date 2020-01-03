@@ -16,7 +16,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://onedebos.github.io/restaurant-page/)
+[Live Demo Link](https://onedebos.github.io/to-do-list/)
 
 ## Clone the project
 ```

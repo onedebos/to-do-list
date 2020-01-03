@@ -1,35 +1,27 @@
 {
-  "name": "To Do List",
+  "name": "todolist",
   "version": "1.0.0",
   "description": "",
   "main": "webpack.config.js",
-  "dependencies": {},
+  "dependencies": {
+    "date-fns": "^2.8.1",
+    "gh-pages": "^2.1.1",
+    "materialize-css": "^1.0.0"
+  },
   "devDependencies": {
-    "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.9"
+    "webpack": "^4.41.4",
+    "webpack-cli": "^3.3.10"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages -d dist",
     "build": "webpack",
     "watch": "webpack --watch"
   },
   "keywords": [],
   "author": "",
-<<<<<<< HEAD
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/onedebos/to-do-list/issues"
   },
-  "homepage": "https://github.com/onedebos/to-do-list#readme",
-  "devDependencies": {
-    "webpack": "^4.41.4",
-    "webpack-cli": "^3.3.10"
-  },
-  "dependencies": {
-    "date-fns": "^2.8.1",
-    "materialize-css": "^1.0.0"
-  }
-=======
-  "license": "ISC"
->>>>>>> c0596735f23fa7e16719eb2e13526b4e5f1be882
+  "homepage": "https://onedebos.github.io/to-do-list"
 }

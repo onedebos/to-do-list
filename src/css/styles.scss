@@ -1,0 +1,80 @@
+$grey: #353c51;
+$muted-white: #f0fff0;
+$greyish: grey;
+$todos-text: black;
+$todos-text-border-bottom: #626f78;
+$input-border: grey;
+
+body {
+  background-color: $grey;
+  color: $muted-white;
+}
+
+li {
+  list-style: none;
+}
+
+.all-projects :last-child {
+  margin-top: 1.5em;
+}
+
+input {
+  border: none;
+  color: $muted-white;
+  border-bottom: 2px solid $input-border;
+  background-color: $grey;
+  padding: 0.5em;
+}
+
+.todo-list-title {
+  background-color: $greyish;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  color: black;
+  padding: 0.5em;
+}
+
+.todo-title {
+  padding-left: 0.5em;
+}
+
+.created-time {
+  font-size: 1em;
+  padding-bottom: 1em;
+}
+.todos {
+  color: $todos-text;
+}
+
+.todo-input {
+  color: $todos-text;
+}
+
+.collection-input {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.edit-delete {
+  color: rgba(224, 224, 224, 0.8);
+}
+
+.edit-delete :hover {
+  color: red;
+  transition: 0.2s ease-in;
+}
+
+.active {
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+.todo-categories li {
+  cursor: pointer;
+}
+
+.category-item{
+    cursor: pointer;
+}
