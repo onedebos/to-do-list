@@ -1,0 +1,199 @@
+body {
+  background-color: #53535f;
+}
+
+#content {
+  width: 75%;
+  margin: auto;
+
+}
+
+header h1 {
+  text-align: center;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+main aside {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0.5em;
+  width: calc(30% - 1em);
+}
+
+main aside > div, main div#todos {
+  zoom: 1;
+  padding: 1.5rem;
+  border: 1px solid #edf2f9;
+  line-height: 1.5;
+  color: #53535f;
+  background: #fff;
+  border-radius: .25rem;
+  font-size: .875rem;
+  margin-bottom: 1.25rem;
+}
+
+main div#todos {
+  margin: 0.5em;
+  width: calc(70% - 1em);
+  height: max-content;
+}
+
+.form-control, .btn, .list-group-item:first-child, .list-group-item:last-child {
+  border-radius: 0;
+}
+
+form#todo-form .row {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 1199.98px) {
+  main {
+
+  }
+}
+
+@media (max-width: 991.98px) {
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  main aside {
+    display: flex;
+    flex-direction: row;
+    width: calc(100% - 1em);
+  }
+}
+
+@media (max-width: 767.98px) {
+  main {
+
+  }
+}
+
+@media (max-width: 575.98px) {
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  main aside {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 1em);
+  }
+}
+
+ul#projects-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+ul#projects-list li {
+  padding-right: 16px;
+  padding-left: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #edf2f9;
+}
+
+#todos header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#todos header select.custom-select {
+  display: inline;
+  width: auto;
+}
+
+.todo {
+  padding: 15px 0;
+  border-bottom: 1px solid #edf2f9;
+  cursor: pointer;
+  display: -webkit-box;
+  display: flex;
+}
+
+.todo .todo-infos {
+  width: 100%;
+}
+
+.todo .header, .todo .footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo .body {
+  text-align: justify;
+}
+
+.todo .footer .infos, .todo .footer .actions {
+  flex-grow: 0.5;
+  display: flex;
+}
+
+.todo .footer .infos {
+  justify-content: flex-start;
+}
+
+.todo .footer .infos div, .todo .footer .actions button {
+  margin: 0.2em;
+}
+
+.todo .footer .actions {
+  justify-content: flex-end;
+}
+
+@media (max-width: 1199.98px) {
+  main {
+
+  }
+}
+
+@media (max-width: 991.98px) {
+
+  main aside > div {
+    width: calc(50% - 0.5em);
+  }
+
+  main aside #todo-form-wrapper {
+    margin-right: 0.5em;
+  }
+
+  main aside #projects {
+    margin-left: 0.5em;
+  }
+
+  main div#todos {
+    width: calc(100% - 1em);
+  }
+}
+
+@media (max-width: 767.98px) {
+  main {
+    background-color: red;
+  }
+}
+
+@media (max-width: 575.98px) {
+  main aside > div {
+    width: calc(100% - 1em);
+    margin: 0 0.5em;
+  }
+
+  main div#todos {
+    width: calc(100% - 1em);
+  }
+}

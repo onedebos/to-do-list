@@ -1,16 +1,21 @@
 {
-  "name": "to-do-list",
+  "name": "To Do List",
   "version": "1.0.0",
-  "description": "> In this project, we build a to-do-list app with various functionalities and using the date-fns npm module.",
-  "main": "index.js",
+  "description": "",
+  "main": "webpack.config.js",
+  "dependencies": {},
+  "devDependencies": {
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "watch": "webpack --watch"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/onedebos/to-do-list.git"
-  },
+  "keywords": [],
   "author": "",
+<<<<<<< HEAD
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/onedebos/to-do-list/issues"
@@ -24,4 +29,7 @@
     "date-fns": "^2.8.1",
     "materialize-css": "^1.0.0"
   }
+=======
+  "license": "ISC"
+>>>>>>> c0596735f23fa7e16719eb2e13526b4e5f1be882
 }

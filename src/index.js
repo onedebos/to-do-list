@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* eslint-disable react/react-in-jsx-scope */
 
 import M from 'materialize-css';
@@ -138,3 +139,8 @@ runCategories.render(); // Always load default category when DOM loads
 grabCatInput();
 
 
+=======
+import initialPageLoad from './initial_page_load';
+
+initialPageLoad();
+>>>>>>> c0596735f23fa7e16719eb2e13526b4e5f1be882
