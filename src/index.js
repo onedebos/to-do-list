@@ -1,8 +1,12 @@
 /* eslint-disable react/react-in-jsx-scope */
 
+
 import M from 'materialize-css';
 import toDo from './todos';
 import category from './category';
+import categoryModel from './catModel'
+
+
 
 
 export const getToDoUl = document.querySelector('.collapsible');
@@ -28,6 +32,7 @@ export let categories = JSON.parse(
 
 const runToDo = toDo();
 const runCategories = category();
+const runCatModel = categoryModel();
 
 // clear catObject.categories when DOM loads
 export const clearElement = (element) => {
@@ -44,7 +49,7 @@ const renderCatTwice = () => {
   if (categoryName == null || categoryName == '') {
     M.toast({ html: 'Please enter a category name!' }, 1000);
   } else {
-    const category = runCategories.createCategory(categoryName);
+    const category = runCatModel.createCategory(categoryName);
     catInput.value = null;
     categories.push(category);
     saveToLocalStorage();

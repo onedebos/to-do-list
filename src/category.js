@@ -7,7 +7,7 @@ const runToDo = toDo();
 
 
 const category = () => {
-  const createCategory = (name) => ({ name, id: Date.now(), todos: [] });
+  
 
   const render = () => {
     index.clearElement(index.categoryContainer);
@@ -30,7 +30,7 @@ const category = () => {
     }
   };
 
-  return { createCategory, render };
+  return {  render };
 };
 
 
