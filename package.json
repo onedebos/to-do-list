@@ -21,6 +21,7 @@
     "webpack-cli": "^3.3.10"
   },
   "dependencies": {
-    "date-fns": "^2.8.1"
+    "date-fns": "^2.8.1",
+    "materialize-css": "^1.0.0"
   }
 }
