@@ -4,14 +4,13 @@ import ToDoModel from "../model/toDoModel";
 const index = require("../index");
 import formatDistanceToNow from "/home/adebola/Documents/microverse/javascript/to-do-list/node_modules/date-fns/formatDistanceToNow";
 
-
-const ToDoView = (() =>{
-    const renderToDo = (selectedCat) => {
-        sharedViews.clearElement(index.getToDoUl);
-        selectedCat.todos.forEach((todo) => {
-          const createToDoLi = document.createElement('li');
-          createToDoLi.dataset.todoId = ToDoModel.todoItems.id;
-          createToDoLi.innerHTML = `
+const ToDoView = (() => {
+  const renderToDo = selectedCat => {
+    sharedViews.clearElement(index.getToDoUl);
+    selectedCat.todos.forEach(todo => {
+      const createToDoLi = document.createElement("li");
+      createToDoLi.dataset.todoId = ToDoModel.todoItems.id;
+      createToDoLi.innerHTML = `
               
         
             <div class="collapsible-header">
@@ -21,9 +20,11 @@ const ToDoView = (() =>{
               </div>
               <strong>${todo.title}</strong>
               <div class="col s6"><span>Due in ${formatDistanceToNow(
-        new Date(todo.dueDate),
-        true,
-      )}</span></div>
+                new Date(todo.dueDate),
+                true
+              )}</span></div>
+
+              <div
             </div>
             <div class="collapsible-body white-text">
               <span>${todo.description}</span>
@@ -31,12 +32,12 @@ const ToDoView = (() =>{
               <p>${todo.priority}</p>
             </div>
         `;
-    
-          index.getToDoUl.appendChild(createToDoLi);
-        });
-      };
-    
-      return {renderToDo};
+
+      index.getToDoUl.appendChild(createToDoLi);
+    });
+  };
+
+  return { renderToDo };
 })();
 
 export default ToDoView;

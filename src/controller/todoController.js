@@ -1,10 +1,9 @@
-import storage from './model/sharedModel'
-import ToDoModel from "./model/toDoModel";
-import ToDoView from './views/toDoViews'
-
-import sharedViews from './views/sharedViews'
+import storage from '../model/sharedModel'
+import ToDoModel from "../model/toDoModel";
+import ToDoView from '../views/toDoViews'
+import sharedViews from '../views/sharedViews'
 // eslint-disable-next-line no-undef
-const index = require('./index');
+const index = require('../index');
 
 
 
@@ -25,7 +24,7 @@ const toDo = () => {
       if (
         theTitle == '' ||
         listDecription == '' ||
-        listPriority == 'Choose your option '
+        listPriority == 'Choose your option'
       ) {
         sharedViews.displayErrorMessage('Please complete todo Form!');
       } else if (listDate < todaysDate) {

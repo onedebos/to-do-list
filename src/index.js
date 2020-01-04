@@ -9,7 +9,7 @@ import sharedViews from "./views/sharedViews";
 import sharedController from "./controller/sharedController";
 
 import renderCategories from "./views/catView";
-import toDo from "./todos";
+import toDo from "./controller/todoController";
 
 
 export const getToDoUl = document.querySelector(".collapsible");
