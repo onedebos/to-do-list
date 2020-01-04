@@ -37,6 +37,7 @@ const toDo = () => {
           selectedPriority,
         )
 
+
         let selectedCat;
         if (index.categories.length == 1) {
           selectedCat = index.categories.find((category) => category.id == 1);
@@ -45,7 +46,8 @@ const toDo = () => {
             (category) => category.id == index.selectedCatId,
           );
         }
-
+        console.log(newToDo.id);
+        console.log("hi");
         selectedCat.todos.push(newToDo);
         ToDoView.renderToDo(selectedCat);
         storage.saveToLocalStorage();

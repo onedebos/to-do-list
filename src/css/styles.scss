@@ -57,11 +57,11 @@ input {
   align-items: center;
 }
 
-.edit-delete {
+.del-hover {
   color: rgba(224, 224, 224, 0.8);
 }
 
-.edit-delete :hover {
+.del-hover:hover {
   color: red;
   transition: 0.2s ease-in;
 }

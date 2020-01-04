@@ -1,0 +1,88 @@
+body {
+  background-color: #353c51;
+  color: #f0fff0;
+}
+
+li {
+  list-style: none;
+}
+
+.all-projects :last-child {
+  margin-top: 1.5em;
+}
+
+input {
+  border: none;
+  color: #f0fff0;
+  border-bottom: 2px solid grey;
+  background-color: #353c51;
+  padding: 0.5em;
+}
+
+.todo-list-title {
+  background-color: grey;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: black;
+  padding: 0.5em;
+}
+
+.todo-title {
+  padding-left: 0.5em;
+}
+
+.created-time {
+  font-size: 1em;
+  padding-bottom: 1em;
+}
+
+.todos {
+  color: black;
+}
+
+.todo-input {
+  color: black;
+}
+
+.collection-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.del-hover {
+  color: rgba(224, 224, 224, 0.8);
+}
+
+.del-hover:hover {
+  color: red;
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+}
+
+.active {
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+.todo-categories li {
+  cursor: pointer;
+}
+
+.category-item {
+  cursor: pointer;
+}
+/*# sourceMappingURL=styles.css.map */

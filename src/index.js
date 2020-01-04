@@ -1,12 +1,13 @@
 /* eslint-disable react/react-in-jsx-scope */
 
+// eslint-disable-next-line no-unused-vars
+import sharedController from "./controller/sharedController";
 import storage from './model/sharedModel'
 // eslint-disable-next-line no-unused-vars
 import grabCatInput from "./controller/catController";
 // eslint-disable-next-line no-unused-vars
 import sharedViews from "./views/sharedViews";
-// eslint-disable-next-line no-unused-vars
-import sharedController from "./controller/sharedController";
+
 
 import renderCategories from "./views/catView";
 import toDo from "./controller/todoController";
@@ -55,3 +56,5 @@ const renderWhenNoCats = () => {
 
 runToDo.passToDosToObject();
 renderCategories.render(); // Always load default category when DOM loads
+
+console.log("ehshsh");

@@ -1,5 +1,6 @@
 import sharedViews from "../views/sharedViews";
-import ToDoModel from "../model/toDoModel";
+
+
 // eslint-disable-next-line no-undef
 const index = require("../index");
 import formatDistanceToNow from "/home/adebola/Documents/microverse/javascript/to-do-list/node_modules/date-fns/formatDistanceToNow";
@@ -9,7 +10,7 @@ const ToDoView = (() => {
     sharedViews.clearElement(index.getToDoUl);
     selectedCat.todos.forEach(todo => {
       const createToDoLi = document.createElement("li");
-      createToDoLi.dataset.todoId = ToDoModel.todoItems.id;
+      createToDoLi.dataset.todoId = todo.id;
       createToDoLi.innerHTML = `
               
         
@@ -23,7 +24,10 @@ const ToDoView = (() => {
                 new Date(todo.dueDate),
                 true
               )}</span></div>
-
+              <div class="col del-hover">
+              <i class="material-icons" data-del-todo-btn=${todo.id}>delete</i>
+              
+            </div>
               <div
             </div>
             <div class="collapsible-body white-text">

@@ -4,7 +4,7 @@ const sharedController = (() =>{
     
     document.addEventListener('DOMContentLoaded', () => {
         const elems = document.querySelectorAll('.collapsible');
-        M.Collapsible.init(elems);
+        M.Collapsible.init(elems,true);
       });
       
       document.addEventListener('DOMContentLoaded', () => {
