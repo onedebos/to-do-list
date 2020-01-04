@@ -1,6 +1,5 @@
 import sharedViews from "../views/sharedViews";
 
-
 const index = require("../index");
 import formatDistanceToNow from "/home/adebola/Documents/microverse/javascript/to-do-list/node_modules/date-fns/formatDistanceToNow";
 
@@ -15,10 +14,7 @@ const ToDoView = (() => {
       
       <i class="material-icons">attach_file</i>${todo.title}
       <div class="col s6">
-      <span>Due in ${formatDistanceToNow(
-        new Date(todo.dueDate),
-        true
-      )}</span>
+      <span>Due in ${formatDistanceToNow(new Date(todo.dueDate), true)}</span>
       </div> 
       </div>
       <div class="collapsible-body white-text">

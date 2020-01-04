@@ -1,18 +1,11 @@
-/* eslint-disable react/react-in-jsx-scope */
 
 
 import sharedController from "./controller/sharedController";
-import storage from './model/sharedModel'
-
+import storage from "./model/sharedModel";
 import grabCatInput from "./controller/catController";
-
 import sharedViews from "./views/sharedViews";
-
-
 import renderCategories from "./views/catView";
 import toDo from "./controller/todoController";
-
-
 
 export const getToDoUl = document.querySelector(".collapsible");
 const LOCAL_STORAGE_SELECTED_CAT_ID_KEY = "todos.selectedCatId";
@@ -33,8 +26,6 @@ const storeCatId = el => {
     selectedCatId = el.getAttribute("data-cat-id");
   }
 };
-
-
 
 categoryContainer.addEventListener("click", e => {
   storeCatId(e.target);

@@ -1,11 +1,9 @@
-import storage from '../model/sharedModel';
+import storage from "../model/sharedModel";
 const index = require("../index");
 import catModel from "../model/catModel";
 import sharedViews from "../views/sharedViews";
 
-
-import ToDoView from './toDoViews';
-
+import ToDoView from "./toDoViews";
 
 const renderCategories = (() => {
   const listContainer = set => {
