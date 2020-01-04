@@ -63,15 +63,14 @@ input {
           align-items: center;
 }
 
-.del-hover {
+.edit-delete {
   color: rgba(224, 224, 224, 0.8);
 }
 
-.del-hover:hover {
+.edit-delete :hover {
   color: red;
   -webkit-transition: 0.2s ease-in;
   transition: 0.2s ease-in;
-  cursor: pointer;
 }
 
 .active {
@@ -86,4 +85,3 @@ input {
 .category-item {
   cursor: pointer;
 }
-/*# sourceMappingURL=styles.css.map */
