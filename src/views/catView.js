@@ -1,5 +1,4 @@
-import storage from '../model/sharedModel'
-// eslint-disable-next-line no-undef
+import storage from '../model/sharedModel';
 const index = require("../index");
 import catModel from "../model/catModel";
 import sharedViews from "../views/sharedViews";

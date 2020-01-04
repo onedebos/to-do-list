@@ -1,6 +1,6 @@
 import sharedViews from "../views/sharedViews";
 
-// eslint-disable-next-line no-undef
+
 const index = require("../index");
 import formatDistanceToNow from "/home/adebola/Documents/microverse/javascript/to-do-list/node_modules/date-fns/formatDistanceToNow";
 
@@ -25,12 +25,7 @@ const ToDoView = (() => {
       <span>${todo.description}</span>
   <p>Due date: ${todo.dueDate}</p>
   <p>${todo.priority}</p>
-  <div class="del-hover">
-      <i class="material-icons del-todo" data-del-todo-btn=${todo.id}>delete</i>
-      </div>
-      <div class="del-hover">
-      <i class="material-icons del-todo" data-del-edit-btn=${todo.id}>create</i>
-      </div> 
+  
       </div>
         
             

@@ -1,4 +1,4 @@
-// eslint-disable-next-line no-undef
+
 const index = require("../index");
 
 const storage = (() =>{

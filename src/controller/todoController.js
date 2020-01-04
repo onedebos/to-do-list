@@ -2,8 +2,7 @@ import storage from '../model/sharedModel'
 import ToDoModel from "../model/toDoModel";
 import ToDoView from '../views/toDoViews'
 import sharedViews from '../views/sharedViews'
-import { selectedCatId } from '..';
-// eslint-disable-next-line no-undef
+
 const index = require('../index');
 
 
