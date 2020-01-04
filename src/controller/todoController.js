@@ -2,6 +2,7 @@ import storage from '../model/sharedModel'
 import ToDoModel from "../model/toDoModel";
 import ToDoView from '../views/toDoViews'
 import sharedViews from '../views/sharedViews'
+import { selectedCatId } from '..';
 // eslint-disable-next-line no-undef
 const index = require('../index');
 
@@ -46,19 +47,36 @@ const toDo = () => {
             (category) => category.id == index.selectedCatId,
           );
         }
-        console.log(newToDo.id);
-        console.log("hi");
         selectedCat.todos.push(newToDo);
         ToDoView.renderToDo(selectedCat);
         storage.saveToLocalStorage();
+        
       }
     });
   };
 
-  
-  return { passToDosToObject};
-};
 
+  const deleteToDos = () =>{
+
+    const selectedCat = index.categories.find(
+      (category) => category.id == index.selectedCatId,
+    );
+    selectedCat.todos 
+    const delToDo = document.querySelector('.del-todo');
+    delToDo.addEventListener('click',()=>{
+      console.log("clicked button");
+    })
+    
+  }
+
+  const getSelectedToDo = (selectedToDoID) =>{
+    
+  }
+
+
+  
+  return { passToDosToObject, deleteToDos};
+};
 
 
 export default toDo;

@@ -13,6 +13,7 @@ import renderCategories from "./views/catView";
 import toDo from "./controller/todoController";
 
 
+
 export const getToDoUl = document.querySelector(".collapsible");
 const LOCAL_STORAGE_SELECTED_CAT_ID_KEY = "todos.selectedCatId";
 export const LOCAL_STORAGE_CATEGORY_KEY = "todos.categories";
@@ -56,5 +57,3 @@ const renderWhenNoCats = () => {
 
 runToDo.passToDosToObject();
 renderCategories.render(); // Always load default category when DOM loads
-
-console.log("ehshsh");

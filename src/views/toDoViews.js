@@ -5,6 +5,8 @@ import sharedViews from "../views/sharedViews";
 const index = require("../index");
 import formatDistanceToNow from "/home/adebola/Documents/microverse/javascript/to-do-list/node_modules/date-fns/formatDistanceToNow";
 
+
+
 const ToDoView = (() => {
   const renderToDo = selectedCat => {
     sharedViews.clearElement(index.getToDoUl);
@@ -25,7 +27,7 @@ const ToDoView = (() => {
                 true
               )}</span></div>
               <div class="col del-hover">
-              <i class="material-icons" data-del-todo-btn=${todo.id}>delete</i>
+              <i class="material-icons del-todo" data-del-todo-btn=${todo.id}>delete</i>
               
             </div>
               <div
@@ -38,6 +40,8 @@ const ToDoView = (() => {
         `;
 
       index.getToDoUl.appendChild(createToDoLi);
+     
+
     });
   };
 
