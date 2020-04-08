@@ -26,6 +26,9 @@ git clone https://github.com/onedebos/to-do-list.git
 ### Automated Tests
 - Currently, there are no automated tests avaailable for this project. This will be implemented at a later date.
 
+### Planned features
+- Create a mobile UI.
+
 ## Install dependencies
 
 ```
